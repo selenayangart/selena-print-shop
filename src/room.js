@@ -741,7 +741,7 @@
     var inset = tuning.mobileInset;
     panelHost.style.top = 'auto';
     panelHost.style.bottom = inset + 'px';
-    panelHost.style.width = Math.min(tuning.panelWidth, viewerBounds.width - inset * 2) + 'px';
+    panelHost.style.width = Math.min(Math.max(520, tuning.panelWidth), viewerBounds.width - inset * 2) + 'px';
     panelHost.style.right = 'auto';
     var panelWidth = panelHost.offsetWidth;
     panelHost.style.left = Math.max(inset, (viewerBounds.width - panelWidth) / 2) + 'px';
@@ -970,7 +970,7 @@
               '<h4 class="room-buy-title">' +
                 '<span class="room-buy-title-text"></span>' +
                 '<span class="room-buy-year"></span>' +
-                '<span class="room-see-more">...see more</span>' +
+                '<span class="room-see-more">View artwork</span>' +
               '</h4>' +
             '</a>' +
           '</header>' +

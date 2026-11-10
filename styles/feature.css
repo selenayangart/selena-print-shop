@@ -643,3 +643,69 @@
   .room-panel--standalone .room-size--secondary,
   .room-panel--standalone .room-buy{ forced-color-adjust:auto; }
 }
+/* Purchase-card hierarchy: artwork, reference size, then purchase controls. */
+.explore-room .room-panel--standalone{
+  padding:16px;
+}
+.room-panel--standalone .room-buy-card{ gap:16px; }
+.room-panel--standalone .room-buy-title{
+  min-height:0; max-height:none; overflow:visible;
+  margin:0; padding-right:40px;
+  font-size:18px; font-weight:600; line-height:1.4;
+  overflow-wrap:anywhere;
+}
+.room-panel--standalone .room-buy-title-text{ font:inherit; }
+.room-panel--standalone .room-buy-year{
+  font-size:14px; font-weight:400; color:var(--muted);
+}
+.room-panel--standalone .room-see-more{
+  display:block; margin:8px 0 0;
+  font-size:14px; font-weight:500; color:var(--muted);
+}
+.room-panel--standalone .room-purchase-stage{
+  width:100%; min-height:0; gap:12px; padding-top:16px;
+  border-top:1px solid rgba(0,0,0,.12);
+}
+.room-panel--standalone .room-buy-summary{
+  min-height:24px; gap:12px; font-size:14px; line-height:1.5;
+}
+.room-panel--standalone .room-buy-selection{
+  font-size:14px; font-weight:500; color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.room-panel--standalone .lb-size-groups,
+.room-panel--standalone .lb-size-group{ gap:12px; }
+.room-panel--standalone .lb-size-label{ font-size:14px; font-weight:500; }
+.room-panel--standalone .room-size{
+  min-height:44px; padding:10px 8px; font-size:16px; line-height:1.4;
+}
+.room-panel--standalone .room-unit{
+  min-width:44px; height:36px; font-size:14px;
+}
+.room-panel--standalone .room-purchase-actions{
+  grid-template-columns:44px minmax(0,1fr); gap:8px;
+}
+.room-panel--standalone .room-size-back{ width:44px; height:44px; }
+.room-panel--standalone .room-buy{
+  min-height:44px; padding:12px 16px; gap:8px;
+  font-size:16px; line-height:1.3;
+}
+.room-panel--standalone .room-buy-label{ white-space:normal; min-width:0; }
+.room-panel--standalone .room-buy-price{ font-weight:600; }
+
+@media (min-width:901px){
+  .room-panel--standalone .room-buy-card{
+    grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);
+    gap:16px; padding-right:28px; align-items:center;
+  }
+  .room-panel--standalone .room-buy-head{ grid-column:1; grid-row:1; }
+  .room-panel--standalone .room-buy-title{ padding-right:0; font-size:16px; }
+  .room-panel--standalone .room-see-more{ margin-top:6px; }
+  .room-panel--standalone .room-purchase-stage{
+    grid-column:2; grid-row:1; padding:0 0 0 16px;
+    border-top:0; border-left:1px solid rgba(0,0,0,.12); gap:8px;
+  }
+  .room-panel--standalone .room-buy-summary{ gap:8px; }
+  .room-panel--standalone .room-buy-label{ white-space:nowrap; }
+  .room-panel--standalone .room-buy{ padding:12px; }
+}
