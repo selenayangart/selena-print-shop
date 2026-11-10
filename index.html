@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive print-shop demo with gray artwork placeholders and a photo-backed WebGL viewing room.">
+  <title>Print shop | Selena Yang</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/feature.css">
+</head>
+<body>
+  <a class="skip-link" href="#viewing-room">Skip to print shop</a>
+  <header class="demo-header">
+    <a href="https://selenayang.art/">Selena Yang</a>
+    <span class="demo-status" id="checkout-status">Demo · checkout disabled</span>
+    <label>Language <select id="language"><option value="en">English</option><option value="zh">中文</option><option value="ko">한국어</option></select></label>
+  </header>
+  <main>
+    <section class="section explore-room" id="viewing-room" aria-labelledby="room-title">
+      <div class="lb-room-row explore-room-row">
+        <h1 class="lb-room-title" id="room-title" data-i18n="room.landingHeading">Print shop</h1>
+        <div class="lb-room-viewer explore-room-viewer"></div>
+        <div class="lb-room-panel explore-room-panel"></div>
+      </div>
+      <div class="lb-room-sliders explore-room-controls" role="group" aria-label="Viewing room controls"></div>
+    </section>
+  </main>
+  <footer class="demo-footer"><span>Sample artwork placeholders · add your own images</span><a href="https://selenayang.art/">Visit the portfolio</a></footer>
+  <script src="config.js"></script>
+  <script src="data/works.js"></script>
+  <script src="data/translations.js"></script>
+  <script src="src/i18n.js"></script>
+  <script src="src/artwork-details.js"></script>
+  <script src="src/room.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
